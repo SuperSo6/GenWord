@@ -42,7 +42,7 @@ rule C_EXECUTABLE_LINKER__Projet_C_Gen_Word_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files\JetBrains\CLion 2021.3.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\Romai\Desktop\Projet_C_Gen_Word -BC:\Users\Romai\Desktop\Projet_C_Gen_Word\cmake-build-debug
+  command = "C:\Program Files\JetBrains\CLion 2021.3.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\Romai\Desktop\GenWord-main\Projet_C_Gen_Word -BC:\Users\Romai\Desktop\GenWord-main\Projet_C_Gen_Word\cmake-build-debug
   description = Re-running CMake...
   generator = 1
 
