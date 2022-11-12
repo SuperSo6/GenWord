@@ -6,4 +6,4 @@ stabilisait	stabiliser	Ver:IImp+SG+P3
 stabilisames	stabiliser	Ver:IPSim+PL+P1
 stabilisant	stabilisant	Adj:Mas+SG
 stabilisant	stabilisant	Nom:Mas+SG
-stabilisassent	stabiliser	Ver:SImp+PL+P3
+stabilisassent	stabiliser	Ver:IImp+PL+P3

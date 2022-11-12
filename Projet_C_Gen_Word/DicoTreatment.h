@@ -9,11 +9,14 @@
 
 void LireFichier();
 
+
+
 void SortCategory(char[MAX_LENGTH],char[MAX_LENGTH],char[MAX_LENGTH]);
 
 void Adverbes();
-void Verbes();
+void Verbes(char [MAX_LENGTH],char [MAX_LENGTH],char [MAX_LENGTH]);
 void Adjectifs();
 void Noms(char[MAX_LENGTH],char[MAX_LENGTH],char[MAX_LENGTH]);
+
 
 #endif //PROJET_C_GEN_WORD_DICOTREATMENT_H

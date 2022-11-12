@@ -8,6 +8,8 @@
 #include <string.h>
 #define MAX_LENGTH 256
 
+
+
 void LireFichier(){
     FILE *fp = fopen("../dico.txt", "r");
 
@@ -54,7 +56,8 @@ void LireFichier(){
         printf("String 2 : %s \n",str1);
         printf("String 3 : %s \n",str2);
         printf("------------- \n");
-        */
+         */
+
 
 }
 
@@ -75,7 +78,7 @@ void SortCategory(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Categor
     type[3]='\0';
 
     if(strcmp(type,"Ver") == 0){
-        Verbes();
+        Verbes(Mot, FormeFlechi,  Category);
 
     } else if(strcmp(type,"Adj") == 0){
         Adjectifs();
@@ -101,8 +104,54 @@ void Adverbes(){
     return;
 }
 
-void Verbes(){
-    printf("Verbes\n");
+void Verbes(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Category[MAX_LENGTH]){
+    char temps[6],personne[3],quantite[3],test1[MAX_LENGTH],test2[MAX_LENGTH];
+    int cpt=0,i=0;
+    char *Verbe_Temp,*V_String ;
+
+    Verbe_Temp= strtok(Category, ":");
+
+    while(Verbe_Temp != NULL)
+    {
+
+
+
+        if (strcmp(Verbe_Temp,"Ver")!=0){
+           /* printf("'%s'\n",Verbe_Temp);*/
+
+            switch (cpt) {
+                case 0:{
+
+                    for(i=0;i<sizeof(Verbe_Temp);i++){
+                        test1[i]=Verbe_Temp[i];
+                    }
+                    test1[i]='\0';
+                    printf("case 0 : %s\n",test1);
+                    break;
+                }
+                case 1:{
+                    printf("case1");
+                    break;
+                }
+                default:{
+                    printf("existe pas");
+                }
+            }
+
+
+            Verbe_Temp = strtok(NULL, ":");
+        } else{
+            Verbe_Temp = strtok(NULL,":");
+        }
+
+
+
+    }
+
+    printf("\n");
+
+
+
     return;
 }
 void Adjectifs(){
@@ -110,21 +159,24 @@ void Adjectifs(){
     return;
 }
 void Noms(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Category[MAX_LENGTH]){
-    char Genre[4],Quantite[3];
+   char Genre[4],Quantite[3];
     int cpt,i=0;
+    char *TriCategory = strtok(Category,":"),*QG;
 
-    for(cpt=4;cpt<7;cpt++){
-        Genre[i]=Category[cpt];
-        i++;
-    }Genre[3]='\0';
-    i=0;
-    for(cpt=8;cpt<=9;cpt++){
-        Quantite[i]=Category[cpt];
-        i++;
-    }Quantite[2]='\0';
+    while (TriCategory !=NULL){
+
+        if(strcmp(TriCategory,"Nom")!=0){
+            printf("T");
+        }
+
+        TriCategory= strtok(NULL,":");
+
+    }
+
 
 
     printf("Noms : %s et %s\n",Quantite,Genre);
 
     return;
 }
+
