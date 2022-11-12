@@ -117,7 +117,7 @@ void Verbes(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Category[MAX_
 
 
         if (strcmp(Verbe_Temp,"Ver")!=0){
-           /* printf("'%s'\n",Verbe_Temp);*/
+
 
             switch (cpt) {
                 case 1:{
@@ -174,10 +174,41 @@ void Verbes(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Category[MAX_
                     break;
                 }
                 default:{
+                    cpt = 1;
                     printf("existe pas");
                 }
 
-                cpt = 1;
+                    switch (cpt) {
+                        case 1:{
+                            /* tab1 */
+                            break;
+                        }
+                        case 2:{
+                            /* tab1,tab2 */
+                            break;
+                        }
+                        case 3:{
+                            /* tab1,tab2,tab3 */
+                            break;
+                        }
+                        case 4:{
+                            /* tab1,tab2,tab3,tab4 */
+                            break;
+                        }
+                        case 5:{
+                            /* tab1,tab2,tab3,tab4,tab5 */
+                            break;
+                        }
+                        case 6:{
+                            /* tab1,tab2,tab3,tab4,tab5,tab6 */
+                            break;
+                        }
+                        default:{
+                            break;
+                        }
+
+                    }
+
             }
 
 
