@@ -89,11 +89,11 @@ void SortCategory(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Categor
         Adverbes();
     }
 
-    /*
+/*
     printf("Mot :  : %s \n",Mot);
     printf("Forme Flechi : %s \n",FormeFlechi);
     printf("------------- \n");
-    */
+*/
 
 
     return;
@@ -105,9 +105,9 @@ void Adverbes(){
 }
 
 void Verbes(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Category[MAX_LENGTH]){
-    char temps[6],personne[3],quantite[3],tab1[MAX_LENGTH],tab2[MAX_LENGTH],tab3[MAX_LENGTH],tab4[MAX_LENGTH],tab5[MAX_LENGTH],tab6[MAX_LENGTH];
+    char temps[6],personne[5]="NULL",quantite[5]="NULL";
     int cpt=1,i=0;
-    char *Verbe_Temp,*V_String ;
+    char *Verbe_Temp,*V_String;
 
     Verbe_Temp= strtok(Category, ":");
 
@@ -117,103 +117,39 @@ void Verbes(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Category[MAX_
 
 
         if (strcmp(Verbe_Temp,"Ver")!=0){
+            temps[0]='1';
+
+            V_String = strtok(Verbe_Temp,"+");
+            while(V_String !=NULL) {
 
 
-            switch (cpt) {
-                case 1:{
+                if (temps[0] == '1') {
+                    strcpy(temps,V_String);
 
-                    for(i=0;i<=sizeof(Verbe_Temp)+2;i++){
-                        tab1[i]=Verbe_Temp[i];
+                } else if(strcmp(temps,"Inf")!=0){
+
+
+
+                    if (quantite[0] == 'N') {
+                        strcpy(quantite,V_String);
+                    } else {
+                        strcpy(personne,V_String);
+
+
                     }
-                    tab1[i]='\0';
-                    printf("case 1 : %s\n",tab1);
-                    cpt++;
-                    break;
-                }
-                case 2:{
-                    for(i=0;i<=sizeof(Verbe_Temp)+2;i++){
-                        tab2[i]=Verbe_Temp[i];
-                    }
-                    tab2[i]='\0';
-                    printf("case 2 : %s\n",tab2);
-                    cpt++;
-                    break;
-                }
-                case 3:{
-                    for(i=0;i<=sizeof(Verbe_Temp)+2;i++){
-                        tab3[i]=Verbe_Temp[i];
-                    }
-                    tab3[i]='\0';
-                    cpt++;
-                    printf("case 3 : %s\n",tab3);
-                    break;
-                }
-                case 4:{
-                    for(i=0;i<=sizeof(Verbe_Temp)+2;i++){
-                        tab4[i]=Verbe_Temp[i];
-                    }
-                    tab4[i]='\0';
-                    cpt++;
-                    printf("case 4 : %s\n",tab4);
-                    break;
-                }case 5:{
-                    for(i=0;i<=sizeof(Verbe_Temp)+2;i++){
-                        tab5[i]=Verbe_Temp[i];
-                    }
-                    tab5[i]='\0';
-                    printf("case 5 : %s\n",tab5);
-                    cpt++;
-                    break;
-                }case 6:{
-                    for(i=0;i<=sizeof(Verbe_Temp)+2;i++){
-                        tab6[i]=Verbe_Temp[i];
-                    }
-                    tab6[i]='\0';
-                    cpt++;
-                    printf("case 6 : %s\n",tab6);
-                    break;
-                }
-                default:{
-                    cpt = 1;
-                    printf("existe pas");
+
+
+
                 }
 
-                    switch (cpt) {
-                        case 1:{
-                            /* tab1 */
-                            break;
-                        }
-                        case 2:{
-                            /* tab1,tab2 */
-                            break;
-                        }
-                        case 3:{
-                            /* tab1,tab2,tab3 */
-                            break;
-                        }
-                        case 4:{
-                            /* tab1,tab2,tab3,tab4 */
-                            break;
-                        }
-                        case 5:{
-                            /* tab1,tab2,tab3,tab4,tab5 */
-                            break;
-                        }
-                        case 6:{
-                            /* tab1,tab2,tab3,tab4,tab5,tab6 */
-                            break;
-                        }
-                        default:{
-                            break;
-                        }
-
-                    }
-
+                V_String = strtok(NULL, "+");
             }
 
+            printf("Conjugaison : %s Verbes : %s temps : %s, personne : %s, quantite : %s\n",Mot,FormeFlechi,temps, personne, quantite);
 
             Verbe_Temp = strtok(NULL, ":");
-        } else{
+        }
+        else{
             Verbe_Temp = strtok(NULL,":");
         }
 
@@ -232,14 +168,28 @@ void Adjectifs(){
     return;
 }
 void Noms(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Category[MAX_LENGTH]){
-   char Genre[4],Quantite[3];
+   char Genre[5],Quantite[4];
     int cpt,i=0;
     char *TriCategory = strtok(Category,":"),*QG;
+    Genre[0]='1';
+
 
     while (TriCategory !=NULL){
 
+
+
         if(strcmp(TriCategory,"Nom")!=0){
-            printf("T");
+        QG = strtok(TriCategory,"+");
+            while (QG != NULL){
+
+                if(Genre[0]=='1'){
+                    strcpy(Genre,QG);
+                } else{
+                    strcpy(Quantite,QG);
+                }
+                QG = strtok(NULL,"+");
+            }
+
         }
 
         TriCategory= strtok(NULL,":");
