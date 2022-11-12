@@ -1,8 +1,4 @@
 # ninja log v5
 0	103	6899654436417547	CMakeFiles/Projet_C_Gen_Word.dir/main.c.obj	df266021a45106d6
-1	68	6899696190875506	CMakeFiles/Projet_C_Gen_Word.dir/DicoTreatment.c.obj	3b2a7555c5665dfd
-68	167	6899696191842914	Projet_C_Gen_Word.exe	78a22641796cbb7b
-1	66	6899696544334635	CMakeFiles/Projet_C_Gen_Word.dir/DicoTreatment.c.obj	3b2a7555c5665dfd
-66	146	6899696545082637	Projet_C_Gen_Word.exe	78a22641796cbb7b
-1	65	6899697415021050	CMakeFiles/Projet_C_Gen_Word.dir/DicoTreatment.c.obj	3b2a7555c5665dfd
-65	146	6899697415788993	Projet_C_Gen_Word.exe	78a22641796cbb7b
+2	67	6899710796517687	CMakeFiles/Projet_C_Gen_Word.dir/DicoTreatment.c.obj	3b2a7555c5665dfd
+68	149	6899710797291885	Projet_C_Gen_Word.exe	78a22641796cbb7b

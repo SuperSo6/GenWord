@@ -67,7 +67,7 @@ void LireFichier(){
 
 }
 
-void SortCategory(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Category[MAX_LENGTH]){
+void SortCategory(char Mot[MAX_LENGTH],char FormeBase[MAX_LENGTH],char Category[MAX_LENGTH]){
 
     char type[4];
     int i;
@@ -78,12 +78,12 @@ void SortCategory(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Categor
     type[3]='\0';
 
     if(strcmp(type,"Ver") == 0){
-        Verbes(Mot, FormeFlechi,  Category);
+        Verbes(Mot, FormeBase,  Category);
 
     } else if(strcmp(type,"Adj") == 0){
         Adjectifs();
     }else if(strcmp(type,"Nom") == 0){
-        Noms(Mot, FormeFlechi,  Category);
+        Noms(Mot, FormeBase,  Category);
 
     }else if(strcmp(type,"Adv") == 0){
         Adverbes();
@@ -99,13 +99,13 @@ void SortCategory(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Categor
     return;
 }
 
-void Adverbes(){
-    printf("Adverbes\n");
+void Adverbes(char Mot[MAX_LENGTH],char FormeBase[MAX_LENGTH],char Category[MAX_LENGTH]){
+    printf("FormeBase\n");
     return;
 }
 
-void Verbes(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Category[MAX_LENGTH]){
-    char temps[6],personne[5]="NULL",quantite[5]="NULL";
+void Verbes(char Mot[MAX_LENGTH],char FormeBase[MAX_LENGTH],char Category[MAX_LENGTH]){
+    char temps[15],personne[15]="NULL",quantite[15]="NULL";
     int cpt=1,i=0;
     char *Verbe_Temp,*V_String;
 
@@ -145,7 +145,7 @@ void Verbes(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Category[MAX_
                 V_String = strtok(NULL, "+");
             }
 
-            printf("Conjugaison : %s Verbes : %s temps : %s, personne : %s, quantite : %s\n",Mot,FormeFlechi,temps, personne, quantite);
+            printf("Conjugaison : %s Verbes : %s temps : %s, personne : %s, quantite : %s\n",Mot,FormeBase,temps, personne, quantite);
 
             Verbe_Temp = strtok(NULL, ":");
         }
@@ -163,12 +163,43 @@ void Verbes(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Category[MAX_
 
     return;
 }
-void Adjectifs(){
-    printf("Adjectifs\n");
+void Adjectifs(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Category[MAX_LENGTH]){
+    char Genre[15],Quantite[15];
+    int cpt,i=0;
+    char *TriCategory = strtok(Category,":"),*QG;
+    Genre[0]='1';
+
+
+    while (TriCategory !=NULL){
+
+
+
+        if(strcmp(TriCategory,"Adj")!=0){
+            QG = strtok(TriCategory,"+");
+            while (QG != NULL){
+
+                if(Genre[0]=='1'){
+                    strcpy(Genre,QG);
+                } else{
+                    strcpy(Quantite,QG);
+                }
+                QG = strtok(NULL,"+");
+            }
+
+        }
+
+        TriCategory= strtok(NULL,":");
+
+    }
+
+
+
+    printf("Adj : %s et %s\n",Quantite,Genre);
+
     return;
 }
 void Noms(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Category[MAX_LENGTH]){
-   char Genre[5],Quantite[4];
+   char Genre[15],Quantite[15];
     int cpt,i=0;
     char *TriCategory = strtok(Category,":"),*QG;
     Genre[0]='1';
