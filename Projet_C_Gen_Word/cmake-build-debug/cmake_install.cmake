@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Romai/Desktop/GenWord-main/Projet_C_Gen_Word
+# Install script for directory: C:/Users/Romai/Desktop/GenWord/Projet_C_Gen_Word
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Romai/Desktop/GenWord-main/Projet_C_Gen_Word/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Romai/Desktop/GenWord/Projet_C_Gen_Word/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

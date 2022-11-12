@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/Romai/Desktop/GenWord-main/Projet_C_Gen_Word/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/Romai/Desktop/GenWord/Projet_C_Gen_Word/cmake-build-debug/
 
 #############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Romai\Desktop\GenWord-main\Projet_C_Gen_Word\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2021.3.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\Romai\Desktop\GenWord-main\Projet_C_Gen_Word -BC:\Users\Romai\Desktop\GenWord-main\Projet_C_Gen_Word\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D C:\Users\Romai\Desktop\GenWord\Projet_C_Gen_Word\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2021.3.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\Romai\Desktop\GenWord\Projet_C_Gen_Word -BC:\Users\Romai\Desktop\GenWord\Projet_C_Gen_Word\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -61,7 +61,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_Projet_C_Gen_Word: phony || CMakeFiles/Projet_C_Gen_Word.dir
 
-build CMakeFiles/Projet_C_Gen_Word.dir/main.c.obj: C_COMPILER__Projet_C_Gen_Word_Debug C$:/Users/Romai/Desktop/GenWord-main/Projet_C_Gen_Word/main.c || cmake_object_order_depends_target_Projet_C_Gen_Word
+build CMakeFiles/Projet_C_Gen_Word.dir/main.c.obj: C_COMPILER__Projet_C_Gen_Word_Debug C$:/Users/Romai/Desktop/GenWord/Projet_C_Gen_Word/main.c || cmake_object_order_depends_target_Projet_C_Gen_Word
   DEP_FILE = CMakeFiles\Projet_C_Gen_Word.dir\main.c.obj.d
   FLAGS = -g -std=gnu99
   OBJECT_DIR = CMakeFiles\Projet_C_Gen_Word.dir
@@ -69,7 +69,7 @@ build CMakeFiles/Projet_C_Gen_Word.dir/main.c.obj: C_COMPILER__Projet_C_Gen_Word
   TARGET_COMPILE_PDB = CMakeFiles\Projet_C_Gen_Word.dir\
   TARGET_PDB = Projet_C_Gen_Word.pdb
 
-build CMakeFiles/Projet_C_Gen_Word.dir/DicoTreatment.c.obj: C_COMPILER__Projet_C_Gen_Word_Debug C$:/Users/Romai/Desktop/GenWord-main/Projet_C_Gen_Word/DicoTreatment.c || cmake_object_order_depends_target_Projet_C_Gen_Word
+build CMakeFiles/Projet_C_Gen_Word.dir/DicoTreatment.c.obj: C_COMPILER__Projet_C_Gen_Word_Debug C$:/Users/Romai/Desktop/GenWord/Projet_C_Gen_Word/DicoTreatment.c || cmake_object_order_depends_target_Projet_C_Gen_Word
   DEP_FILE = CMakeFiles\Projet_C_Gen_Word.dir\DicoTreatment.c.obj.d
   FLAGS = -g -std=gnu99
   OBJECT_DIR = CMakeFiles\Projet_C_Gen_Word.dir
@@ -101,7 +101,7 @@ build Projet_C_Gen_Word.exe: C_EXECUTABLE_LINKER__Projet_C_Gen_Word_Debug CMakeF
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Romai\Desktop\GenWord-main\Projet_C_Gen_Word\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2021.3.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\Romai\Desktop\GenWord\Projet_C_Gen_Word\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2021.3.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -118,7 +118,7 @@ build Projet_C_Gen_Word: phony Projet_C_Gen_Word.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/Romai/Desktop/GenWord-main/Projet_C_Gen_Word/cmake-build-debug
+# Folder: C:/Users/Romai/Desktop/GenWord/Projet_C_Gen_Word/cmake-build-debug
 
 build all: phony Projet_C_Gen_Word.exe
 
