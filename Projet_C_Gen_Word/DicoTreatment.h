@@ -18,7 +18,7 @@ void SortCategory(char[MAX_LENGTH],char[MAX_LENGTH],char[MAX_LENGTH],arbre,arbre
 void Adverbes();
 void Verbes(char [MAX_LENGTH],char [MAX_LENGTH],char [MAX_LENGTH]);
 void Adjectifs();
-void Noms(char[MAX_LENGTH],char[MAX_LENGTH],char[MAX_LENGTH]);
+void Noms(char[MAX_LENGTH],char[MAX_LENGTH],char[MAX_LENGTH],arbre);
 
 
 #endif //PROJET_C_GEN_WORD_DICOTREATMENT_H

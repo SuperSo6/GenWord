@@ -78,7 +78,7 @@ void LireFichier(){
 
 }
 
-void SortCategory(char Mot[MAX_LENGTH],char FormeBase[MAX_LENGTH],char Category[MAX_LENGTH],arbre Arbre_Nom,arbre Arbre_Nom,arbre Arbre_Nom ,arbre){
+void SortCategory(char Mot[MAX_LENGTH],char FormeBase[MAX_LENGTH],char Category[MAX_LENGTH],arbre Arbre_Nom,arbre Arbre_Adverbe,arbre Arbre_Verbe ,arbre Arbre_Adjectif){
 
     char type[4];
     int z;
@@ -94,7 +94,7 @@ void SortCategory(char Mot[MAX_LENGTH],char FormeBase[MAX_LENGTH],char Category[
     } else if(strcmp(type,"Adj") == 0){
         Adjectifs();
     }else if(strcmp(type,"Nom") == 0){
-        Noms(Mot, FormeBase,  Category);
+        Noms(Mot, FormeBase,  Category, Arbre_Nom);
 
     }else if(strcmp(type,"Adv") == 0){
         Adverbes();
@@ -209,7 +209,7 @@ void Adjectifs(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Category[M
 
     return;
 }
-void Noms(char Mot[MAX_LENGTH],char FormeBase[MAX_LENGTH],char Category[MAX_LENGTH]){
+void Noms(char Mot[MAX_LENGTH],char FormeBase[MAX_LENGTH],char Category[MAX_LENGTH], arbre Arbre_Nom){
    char Genre[15],Quantite[15];
     int cpt,i=0;
     char *TriCategory = strtok(Category,":"),*QG;
