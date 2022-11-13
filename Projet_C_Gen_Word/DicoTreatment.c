@@ -6,11 +6,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+
 #define MAX_LENGTH 256
 
 
 
 void LireFichier(){
+
+
     FILE *fp = fopen("../dico.txt", "r");
 
     char buffer[MAX_LENGTH];
@@ -198,7 +202,7 @@ void Adjectifs(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Category[M
 
     return;
 }
-void Noms(char Mot[MAX_LENGTH],char FormeFlechi[MAX_LENGTH],char Category[MAX_LENGTH]){
+void Noms(char Mot[MAX_LENGTH],char FormeBase[MAX_LENGTH],char Category[MAX_LENGTH]){
    char Genre[15],Quantite[15];
     int cpt,i=0;
     char *TriCategory = strtok(Category,":"),*QG;

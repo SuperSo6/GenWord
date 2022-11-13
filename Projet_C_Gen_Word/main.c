@@ -4,7 +4,14 @@
 #include <sys/stat.h>
 #include "DicoTreatment.h"
 
+
 int main(void) {
-    LireFichier();
-    return 1;
+
+
+
+
+
+
+    //LireFichier();
+    return 0;
 }
