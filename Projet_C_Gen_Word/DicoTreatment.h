@@ -13,7 +13,7 @@ void LireFichier();
 
 
 
-void SortCategory(char[MAX_LENGTH],char[MAX_LENGTH],char[MAX_LENGTH]);
+void SortCategory(char[MAX_LENGTH],char[MAX_LENGTH],char[MAX_LENGTH],arbre,arbre,arbre,arbre);
 
 void Adverbes();
 void Verbes(char [MAX_LENGTH],char [MAX_LENGTH],char [MAX_LENGTH]);

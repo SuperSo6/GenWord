@@ -61,7 +61,7 @@ void LireFichier(){
 
 
 
-       SortCategory(str0,str1,str2);
+       SortCategory(str0,str1,str2,Abr_nom,Abr_Adv,Abr_Verbes,Abr_Adj);
         /*
         printf("String 1 : %s \n",str0);
         printf("String 2 : %s \n",str1);
