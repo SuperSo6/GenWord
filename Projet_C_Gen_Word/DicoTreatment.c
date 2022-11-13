@@ -236,37 +236,30 @@ void Noms(char Mot[MAX_LENGTH],char FormeBase[MAX_LENGTH],char Category[MAX_LENG
 
         TriCategory= strtok(NULL,":");
 
-    }
+    }printf("Noms : %s et %s\n",Quantite,Genre);
 
 
 
-    //printf("Noms : %s et %s\n",Quantite,Genre);
 
+
+    p_cellule nouvelleCellule;
     p_noeud_lettre temp;
     p_noeud_lettre nouveauNoeud;
     size_t taille_base = strlen(FormeBase);
     int compteur=0;
-
     temp = Arbre_Nom.racine;
-    while (compteur<taille_base){
-        nouveauNoeud = creerNoeud(FormeBase[compteur]);
-        p_cellule pointeur_cellule = temp->enfants->head;
-        int trouve = 0;
+    p_cellule pointeur_cellule = temp->enfants->head;
 
-        while (pointeur_cellule!= NULL && trouve !=1){
+    while (compteur<=taille_base){
 
-            if(pointeur_cellule->enfant->lettre==FormeBase[compteur]){
-                temp = pointeur_cellule->enfant ;
-                trouve=1;
 
-            } else{
-                pointeur_cellule = pointeur_cellule->suivant;
-            }
-            taille_base--;
+
+
+            compteur++;
         }
 
 
-    }
+
 
 
 

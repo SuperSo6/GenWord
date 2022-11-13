@@ -7,13 +7,6 @@
 
 int main(void) {
 
-
-
-
-
-
-
-
     LireFichier();
     return 0;
 }
