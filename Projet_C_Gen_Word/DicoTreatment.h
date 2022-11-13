@@ -5,9 +5,11 @@
 #ifndef PROJET_C_GEN_WORD_DICOTREATMENT_H
 #define PROJET_C_GEN_WORD_DICOTREATMENT_H
 #define MAX_LENGTH 256
-
+#include "TreeWords.h"
 
 void LireFichier();
+
+
 
 
 

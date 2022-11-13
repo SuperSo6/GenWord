@@ -3,7 +3,7 @@
 #include <string.h>
 #include <sys/stat.h>
 #include "DicoTreatment.h"
-
+#include "TreeWords.h"
 
 int main(void) {
 
@@ -12,6 +12,8 @@ int main(void) {
 
 
 
-    //LireFichier();
+
+
+    LireFichier();
     return 0;
 }

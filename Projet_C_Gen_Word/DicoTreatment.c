@@ -6,13 +6,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include "TreeWords.h"
 
 #define MAX_LENGTH 256
 
 
 
 void LireFichier(){
+    arbre Abr_nom,Abr_Adj,Abr_Verbes,Abr_Adv;
+    Abr_nom = creerArbre();
+    Abr_Adj = creerArbre();
+    Abr_Verbes = creerArbre();
+    Abr_Adv = creerArbre();
 
 
     FILE *fp = fopen("../dico.txt", "r");
@@ -54,7 +59,9 @@ void LireFichier(){
         }
         str2[j]='\0';
 
-        SortCategory(str0,str1,str2);
+
+
+       SortCategory(str0,str1,str2);
         /*
         printf("String 1 : %s \n",str0);
         printf("String 2 : %s \n",str1);
@@ -74,10 +81,10 @@ void LireFichier(){
 void SortCategory(char Mot[MAX_LENGTH],char FormeBase[MAX_LENGTH],char Category[MAX_LENGTH]){
 
     char type[4];
-    int i;
+    int z;
 
-    for (i=0;i<3;i++){
-        type[i]=Category[i];
+    for (z=0;z<3;z++){
+        type[z]=Category[z];
     }
     type[3]='\0';
 
