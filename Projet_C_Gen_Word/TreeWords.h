@@ -6,10 +6,10 @@
 #define PROJET_C_GEN_WORD_TREEWORDS_H
 
 typedef struct noeud_lettre *p_noeud_lettre;
-
+/*
 struct Flechi_cellule{
-    
-};
+
+};*/
 
 
 typedef struct cellule{
@@ -17,21 +17,21 @@ typedef struct cellule{
     p_noeud_lettre enfant;
     struct cellule * suivant;
 
-};
+}cellule, *p_cellule;
 
 
 typedef struct s_std_liste{
-    p_cell head;
+    p_cellule head;
 }t_std_liste;
 
 
 struct noeud_lettre{
     char lettre;
     t_std_liste * enfants;
-    F_std_liste * FormeFlechie;
+  //  f_std_liste * FormeFlechie;
 
 };
 
-
+p_cellule creerCellule(char lettre);
 
 #endif //PROJET_C_GEN_WORD_TREEWORDS_H
