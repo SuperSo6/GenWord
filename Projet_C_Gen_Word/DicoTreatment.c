@@ -78,7 +78,7 @@ void LireFichier(){
 
 }
 
-void SortCategory(char Mot[MAX_LENGTH],char FormeBase[MAX_LENGTH],char Category[MAX_LENGTH]){
+void SortCategory(char Mot[MAX_LENGTH],char FormeBase[MAX_LENGTH],char Category[MAX_LENGTH],arbre Arbre_Nom,arbre Arbre_Nom,arbre Arbre_Nom ,arbre){
 
     char type[4];
     int z;
