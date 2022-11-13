@@ -22,7 +22,7 @@ typedef struct cellule{
 
 typedef struct s_std_liste{
     p_cellule head;
-}t_std_liste;
+}t_std_liste, *p_std_liste;
 
 
 struct noeud_lettre{

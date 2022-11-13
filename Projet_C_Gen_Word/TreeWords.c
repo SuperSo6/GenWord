@@ -13,3 +13,9 @@ p_cellule creerCellule(char lettre){
     return NouvelleCellule;
 }
 
+p_std_liste creerListvide(){
+    p_std_liste Liste = (p_std_liste) malloc(sizeof (t_std_liste));
+    Liste->head = NULL;
+    return Liste;
+}
+
