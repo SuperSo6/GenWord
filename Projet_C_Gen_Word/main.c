@@ -6,6 +6,8 @@
 #include "TreeWords.h"
 
 int main(void) {
+    // ** MENU ACCUEIL ** //
+    /*
     int choix;
     printf("Bienvenu sur le G%cn%crateur de phrases : \n",130,130);
     printf("Vous avez les choix entre 3 mod%cles de phrases diff%crentes %c g%cn%crer\n",138,130,133,130,130);
@@ -31,7 +33,8 @@ int main(void) {
             printf("Cette option n'existe pas !\n");
             main();
         }
-    }
-    //LireFichier();
+    }*/
+
+    LireFichier(); // Lancer le programe
     return 0;
 }

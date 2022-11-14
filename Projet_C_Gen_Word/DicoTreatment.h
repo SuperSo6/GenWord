@@ -17,7 +17,7 @@ void SortCategory(char[MAX_LENGTH],char[MAX_LENGTH],char[MAX_LENGTH],arbre,arbre
 
 void Adverbes();
 void Verbes(char [MAX_LENGTH],char [MAX_LENGTH],char [MAX_LENGTH]);
-void Adjectifs();
+void Adjectifs(char [MAX_LENGTH],char [MAX_LENGTH],char [MAX_LENGTH],arbre);
 void Noms(char[MAX_LENGTH],char[MAX_LENGTH],char[MAX_LENGTH],arbre);
 
 
