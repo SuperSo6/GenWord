@@ -244,7 +244,7 @@ void Noms(char Mot[MAX_LENGTH],char FormeBase[MAX_LENGTH],char Category[MAX_LENG
 
 
 
-    /*
+
 
     p_noeud_lettre temp;
     p_noeud_lettre nouveauNoeud;
@@ -285,14 +285,14 @@ void Noms(char Mot[MAX_LENGTH],char FormeBase[MAX_LENGTH],char Category[MAX_LENG
         compteur++;
 
 
-    }
+    }/*
     p_noeud_lettre temp2 = Arbre_Nom.racine;
     while (temp2!= NULL){
         printf("%c",temp2->lettre);
         temp2 = temp2->enfants->head->enfant;
-    }
+    }*/
 
-        */
+
 
 
 
