@@ -1,0 +1,2 @@
+Dépot GIT : 
+	- Projet GenWord : https://github.com/SuperSo6/GenWord
