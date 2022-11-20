@@ -8578,7 +8578,6 @@ wurtembergeoise	wurtembergeois	Nom:Fem+SG
 wurtembergeois	wurtembergeois	Adj:Mas+InvPL
 wurtembergeois	wurtembergeois	Nom:Mas+InvPL
 wu	wu	Nom:Mas+SG
-w	w	Nom:Mas+InvPL
 wyandotte	wyandotte	Adj:InvGen+SG
 wyandotte	wyandotte	Nom:Fem+SG
 xanthelasma	xanthelasma	Nom:Mas+SG
@@ -8921,4 +8920,4 @@ zymotechnie	zymotechnie	Nom:Fem+SG
 zymotique	zymotique	Adj:InvGen+SG
 zython	zython	Nom:Mas+SG
 zythum	zythum	Nom:Mas+SG
-z	z	Nom:Mas+InvPL
+

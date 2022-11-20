@@ -6,25 +6,36 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
+
 #include "TreeWords.h"
 
 #define MAX_LENGTH 256
+#define MAX_Length_Tab 10000
 
 
-
-void LireFichier(){
+void LireFichier(int option){
+    char Noms[MAX_Length_Tab],Adjectif[MAX_Length_Tab],Verbes[MAX_Length_Tab],Adverbes[MAX_Length_Tab];
     arbre Abr_nom,Abr_Adj,Abr_Verbes,Abr_Adv; // initialiser les 4 arbres
     Abr_nom = creerArbre(); // Arbre nom
     Abr_Adj = creerArbre(); // Arbre Adjectif
     Abr_Verbes = creerArbre();  // Arbre Verbes
     Abr_Adv = creerArbre(); // Arbre Adverbes
+    time_t t1;
+
+    Noms[0]='1';
+    Adjectif[0]='1';
+    Adverbes[0]='1';
+    Verbes[0]='1';
+
+    srand((unsigned) time (&t1));
 
 
-    FILE *fp = fopen("../dico.txt", "r");   // Creer un pointeur pour ouvrir le fichier
+    FILE *fp = fopen("../dicodezinzin.txt", "r");   // Creer un pointeur pour ouvrir le fichier
 
     char buffer[MAX_LENGTH];
     char str0[MAX_LENGTH],str1[MAX_LENGTH],str2[MAX_LENGTH];
-    int i,j;
+    int i,j,x;
 
     if (fp == NULL)             // Test si le fichier est ouvrable
     {
@@ -59,9 +70,64 @@ void LireFichier(){
         }
         str2[j]='\0';
 
+        char type[4];
+        int z;
+
+        for (z=0;z<3;z++){      // Boucle qui permets de recuperer les 3 premiers caracteres : exemple ( Nom:Mas+SG ) -> Nom
+            type[z]=str2[z];
+        }
+        type[3]='\0';
+
+        if(strcmp(type,"Ver") == 0){                      // Trie et appelle les fonctions définis pour les verbes / adjectifs / noms et adverbes
 
 
-       SortCategory(str0,str1,str2,Abr_nom,Abr_Adv,Abr_Verbes,Abr_Adj);  // on appelle la fonction qui va permettre de trier en fonction de Nom / Verbes / Adjectifs / Adverbes
+            x = rand() % 100 + 1;
+
+            if(x % 13 == 0){
+                fill_tab(Verbes,str0);
+
+            }
+
+
+
+        } else if(strcmp(type,"Adj") == 0){
+
+
+            x = rand() % 100 + 1;
+
+            if(x % 13 == 0){
+                fill_tab(Adjectif,str0);
+
+            }
+
+
+        }else if(strcmp(type,"Nom") == 0){
+
+
+            x = rand() % 100 + 1;
+
+            if(x % 13 == 0){
+                fill_tab(Noms,str0);
+
+            }
+
+
+        }else if(strcmp(type,"Adv") == 0){
+
+
+            x = rand() % 100 + 1;
+
+            if(x % 13 == 0){
+                fill_tab(Adverbes,str0);
+
+            }
+
+
+        }
+
+
+
+     //  SortCategory(str0,str1,str2,Abr_nom,Abr_Adv,Abr_Verbes,Abr_Adj);  // on appelle la fonction qui va permettre de trier en fonction de Nom / Verbes / Adjectifs / Adverbes
         /*
         printf("String 1 : %s \n",str0);
         printf("String 2 : %s \n",str1);
@@ -70,12 +136,85 @@ void LireFichier(){
          */
 
 
+
+
 }
+/*
+    printf("Adjectif : %s\n",Adjectif);
+    printf("Nom : %s\n",Noms);
+    printf("Adv : %s\n",Adverbes);
+    printf("Verbes : %s\n",Verbes);
+*/
+    result(Noms,Adverbes,Verbes,Adjectif,option);
+
+
+
 
     fclose(fp);  // fermer le fichier
 
+
+
     return;
 
+}
+
+void result(char Noms[MAX_Length_Tab],char Adverbes[MAX_Length_Tab],char Verbes[MAX_Length_Tab],char Adjectif[MAX_Length_Tab],int option){
+    time_t t1;
+    srand((unsigned) time (&t1));
+    switch (option) {
+        case 1:{
+             char Nom1[MAX_LENGTH],Adj [MAX_LENGTH],Nom2[MAX_LENGTH],Verb[MAX_LENGTH];                 //  printf("Vous avez choisis le mod%cle ' nom %c adjectif %c verbe %c nom '\n",138,45,45,45);
+             char *V_split;
+             V_split = strtok(Verbes,"/");
+            while (V_split!=NULL){
+
+                printf("%s\n",V_split);
+                V_split = strtok(NULL,"/");
+            }
+             break;
+        }
+        case 2:{
+            break;
+        }
+        case 3:{
+            break;
+        }
+        default:{
+            printf("Cette option n'existe pas\n");
+            break;
+        }
+    }
+}
+
+void fill_tab(char tab[MAX_Length_Tab],char Str[MAX_LENGTH]){
+    char c;
+    size_t taille = strlen(Str);
+    int i,z=0;
+    i=0;
+
+    c = tab[i];
+    if(tab[0]=='1'){
+        for (z=0;z<taille;z++){
+            tab[z]=Str[z];
+        }
+        tab[z]='\0';
+
+    }
+    while (c!='\0'){
+        i++;
+        c=tab[i];
+    }
+    tab[i]='/';
+    i++;
+    for (z=0;z<taille;z++) {
+        tab[i]=Str[z];
+        i++;
+    }
+    tab[i]='\0';
+
+
+
+    return;
 }
 
 void SortCategory(char Mot[MAX_LENGTH],char FormeBase[MAX_LENGTH],char Category[MAX_LENGTH],arbre Arbre_Nom,arbre Arbre_Adverbe,arbre Arbre_Verbe ,arbre Arbre_Adjectif){   // on recupere les 3 strings et les  4 abres
