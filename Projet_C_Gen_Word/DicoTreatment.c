@@ -1,5 +1,5 @@
 //
-// Created by Romai on 18/10/2022.
+// Created by Romain on 18/10/2022.
 //
 
 #include "DicoTreatment.h"
@@ -10,7 +10,7 @@
 
 #include "TreeWords.h"
 
-#define MAX_LENGTH 256
+#define MAX_LENGTH 256          // Taille MAX
 #define MAX_Length_Tab 10000
 
 
@@ -28,7 +28,7 @@ void LireFichier(int option){
     Adverbes[0]='1';
     Verbes[0]='1';
 
-    srand((unsigned) time (&t1));
+    srand((unsigned) time (&t1)); // Permets de creer de l'aleatoire
 
 
     FILE *fp = fopen("../dicodezinzin.txt", "r");   // Creer un pointeur pour ouvrir le fichier
@@ -158,11 +158,12 @@ void LireFichier(int option){
 
 }
 
-void result(char Noms[MAX_Length_Tab],char Adverbes[MAX_Length_Tab],char Verbes[MAX_Length_Tab],char Adjectif[MAX_Length_Tab],int option){
+void result(char Noms[MAX_Length_Tab],char Adverbes[MAX_Length_Tab],char Verbes[MAX_Length_Tab],char Adjectif[MAX_Length_Tab],int option){  // Fonction qui permets de generer les 3 types de phrases
     time_t t1;
     srand((unsigned) time (&t1));
     switch (option) {
         case 1:{
+            // Generation de la phrase numero 1
             // ' nom - adjectif - verbe -nom '
              char *V_split,*N1_split,*N2_split,*A_split;
              V_split = strtok(Verbes,"/");
@@ -198,12 +199,14 @@ void result(char Noms[MAX_Length_Tab],char Adverbes[MAX_Length_Tab],char Verbes[
             }
             if(V_split==NULL || N1_split==NULL || N2_split==NULL || A_split==NULL){
                 printf("Veuillez relancer le programme !");
+                break;
             }
 
             printf("Votre phrase g%cn%cr%c : La %s %s %s une %s",130,130,130,N1_split,A_split,V_split,N2_split);
              break;
         }
         case 2:{
+            //Generation de la phrase numero 2
 
             // ' nom - qui - verbe - verbe - nom - adjectif '
             char *V1_split,*N1_split,*N2_split,*A_split,*V2_split;
@@ -248,12 +251,14 @@ void result(char Noms[MAX_Length_Tab],char Adverbes[MAX_Length_Tab],char Verbes[
             }
             if(V1_split==NULL || N1_split==NULL || N2_split==NULL || A_split==NULL || V2_split==NULL){
                 printf("Veuillez relancer le programme !");
+                break;
             }
 
             printf("Votre phrase g%cn%cr%c : Le %s qui %s %s un %s %s",130,130,130,N1_split,V1_split,V2_split,N2_split,A_split);
             break;
         }
         case 3:{
+            //Generation de la phrase numero 3
             // 'nom - adjectif - qui - verbe - adverbe '
             char *V_split,*N1_split,*Adv_split,*A_split;
             V_split = strtok(Verbes,"/");
@@ -289,6 +294,7 @@ void result(char Noms[MAX_Length_Tab],char Adverbes[MAX_Length_Tab],char Verbes[
             }
             if(V_split==NULL || N1_split==NULL || Adv_split==NULL || A_split==NULL){
                 printf("Veuillez relancer le programme !");
+                break;
             }
             printf("Votre phrase g%cn%cr%c : Le %s %s qui %s %s",130,130,130,N1_split,A_split,V_split,Adv_split);
             break;

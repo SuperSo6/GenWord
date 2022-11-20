@@ -1,5 +1,5 @@
 //
-// Created by Romai on 18/10/2022.
+// Created by Romain on 18/10/2022.
 //
 
 #ifndef PROJET_C_GEN_WORD_DICOTREATMENT_H
