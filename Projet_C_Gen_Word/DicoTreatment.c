@@ -163,20 +163,134 @@ void result(char Noms[MAX_Length_Tab],char Adverbes[MAX_Length_Tab],char Verbes[
     srand((unsigned) time (&t1));
     switch (option) {
         case 1:{
-             char Nom1[MAX_LENGTH],Adj [MAX_LENGTH],Nom2[MAX_LENGTH],Verb[MAX_LENGTH];                 //  printf("Vous avez choisis le mod%cle ' nom %c adjectif %c verbe %c nom '\n",138,45,45,45);
-             char *V_split;
+                           //  printf("Vous avez choisis le mod%cle ' nom %c adjectif %c verbe %c nom '\n",138,45,45,45);
+             char *V_split,*N1_split,*N2_split,*A_split;
              V_split = strtok(Verbes,"/");
-            while (V_split!=NULL){
+             N1_split = strtok(Noms,"/");
+             N2_split = strtok(Noms,"/");
+             A_split = strtok(Adjectif,"/");
+             int x;
+             x= rand()%  40 + 1;
 
-                printf("%s\n",V_split);
+             while (x>0 ){
                 V_split = strtok(NULL,"/");
+                x--;
+             }
+
+
+            x= rand()% 30 + 1;
+            while (x>0){
+                N1_split = strtok(NULL,"/");
+                x--;
             }
+
+
+            x= rand()% 30 + 1;
+            while (x>0 ){
+                N2_split = strtok(NULL,"/");
+                x--;
+            }
+
+            x= rand()% 5 + 1;
+            while (x>0){
+                A_split = strtok(NULL,"/");
+                x--;
+            }
+            if(V_split==NULL || N1_split==NULL || N2_split==NULL || A_split==NULL){
+                printf("Veuillez relancer le programme !");
+            }
+
+            printf("Votre phrase g%cn%cr%c : La %s %s %s une %s",130,130,130,N1_split,A_split,V_split,N2_split);
              break;
         }
         case 2:{
+
+                   // printf("Option 2 : le mod%cle ' nom %c qui %c verbe %c verbe %c nom %c adjectif '\n",138,45,45,45,45,45);
+            char *V1_split,*N1_split,*N2_split,*A_split,*V2_split;
+            V1_split = strtok(Verbes,"/");
+            V2_split = strtok(Verbes,"/");
+            N1_split = strtok(Noms,"/");
+            N2_split = strtok(Noms,"/");
+            A_split = strtok(Adjectif,"/");
+            int x;
+            x= rand()%  40 + 1;
+
+            while (x>0 ){
+                V1_split = strtok(NULL,"/");
+                x--;
+            }
+
+            x= rand()%  40 + 1;
+
+            while (x>0 ){
+                V2_split = strtok(NULL,"/");
+                x--;
+            }
+
+
+            x= rand()% 30 + 1;
+            while (x>0){
+                N1_split = strtok(NULL,"/");
+                x--;
+            }
+
+
+            x= rand()% 30 + 1;
+            while (x>0 ){
+                N2_split = strtok(NULL,"/");
+                x--;
+            }
+
+            x= rand()% 5 + 1;
+            while (x>0){
+                A_split = strtok(NULL,"/");
+                x--;
+            }
+            if(V1_split==NULL || N1_split==NULL || N2_split==NULL || A_split==NULL || V2_split==NULL){
+                printf("Veuillez relancer le programme !");
+            }
+
+            printf("Votre phrase g%cn%cr%c : Le %s qui %s %s un %s %s",130,130,130,N1_split,V1_split,V2_split,N2_split,A_split);
             break;
         }
         case 3:{
+            //printf("Enfin Option 3 : le mod%cle 'nom %c adjectif %c qui %c verbe %c adverbe'\n",138);
+            char *V_split,*N1_split,*Adv_split,*A_split;
+            V_split = strtok(Verbes,"/");
+            N1_split = strtok(Noms,"/");
+            Adv_split = strtok(Noms,"/");
+            A_split = strtok(Adjectif,"/");
+            int x;
+            x= rand()%  40 + 1;
+
+            while (x>0 ){
+                V_split = strtok(NULL,"/");
+                x--;
+            }
+
+
+            x= rand()% 30 + 1;
+            while (x>0){
+                N1_split = strtok(NULL,"/");
+                x--;
+            }
+
+
+            x= rand()% 4 + 1;
+            while (x>0 ){
+                Adv_split = strtok(NULL,"/");
+                x--;
+            }
+
+            x= rand()% 5 + 1;
+            while (x>0){
+                A_split = strtok(NULL,"/");
+                x--;
+            }
+            if(V_split==NULL || N1_split==NULL || Adv_split==NULL || A_split==NULL){
+                printf("Veuillez relancer le programme !");
+            }
+            printf("Votre phrase g%cn%cr%c : Le %s %s qui %s %s",130,130,130,N1_split,A_split,V_split,Adv_split);
             break;
         }
         default:{
