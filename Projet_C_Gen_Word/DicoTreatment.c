@@ -31,7 +31,7 @@ void LireFichier(int option){
     srand((unsigned) time (&t1)); // Permets de creer de l'aleatoire
 
 
-    FILE *fp = fopen("../dicodezinzin.txt", "r");   // Creer un pointeur pour ouvrir le fichier
+    FILE *fp = fopen("../dicodetest.txt", "r");   // Creer un pointeur pour ouvrir le fichier
 
     char buffer[MAX_LENGTH];
     char str0[MAX_LENGTH],str1[MAX_LENGTH],str2[MAX_LENGTH];
