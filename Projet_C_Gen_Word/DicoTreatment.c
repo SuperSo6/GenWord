@@ -84,7 +84,7 @@ void LireFichier(int option){
             x = rand() % 100 + 1;
 
             if(x % 13 == 0){
-                fill_tab(Verbes,str0);
+                fill_abr(Verbes,str0);
 
             }
 
@@ -96,7 +96,7 @@ void LireFichier(int option){
             x = rand() % 100 + 1;
 
             if(x % 13 == 0){
-                fill_tab(Adjectif,str0);
+                fill_abr(Adjectif,str0);
 
             }
 
@@ -107,7 +107,7 @@ void LireFichier(int option){
             x = rand() % 100 + 1;
 
             if(x % 13 == 0){
-                fill_tab(Noms,str0);
+                fill_abr(Noms,str0);
 
             }
 
@@ -118,7 +118,7 @@ void LireFichier(int option){
             x = rand() % 100 + 1;
 
             if(x % 13 == 0){
-                fill_tab(Adverbes,str0);
+                fill_abr(Adverbes,str0);
 
             }
 
@@ -306,7 +306,7 @@ void result(char Noms[MAX_Length_Tab],char Adverbes[MAX_Length_Tab],char Verbes[
     }
 }
 
-void fill_tab(char tab[MAX_Length_Tab],char Str[MAX_LENGTH]){  // permets de remplir un tableau a l'aide partir d'une chaine de caracteres.
+void fill_abr(char tab[MAX_Length_Tab],char Str[MAX_LENGTH]){  // permets de remplir un tableau a l'aide partir d'une chaine de caracteres.
     char c;
     size_t taille = strlen(Str);
     int i,z=0;
