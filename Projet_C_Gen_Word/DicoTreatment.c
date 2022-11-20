@@ -163,7 +163,7 @@ void result(char Noms[MAX_Length_Tab],char Adverbes[MAX_Length_Tab],char Verbes[
     srand((unsigned) time (&t1));
     switch (option) {
         case 1:{
-                           //  printf("Vous avez choisis le mod%cle ' nom %c adjectif %c verbe %c nom '\n",138,45,45,45);
+            // ' nom - adjectif - verbe -nom '
              char *V_split,*N1_split,*N2_split,*A_split;
              V_split = strtok(Verbes,"/");
              N1_split = strtok(Noms,"/");
@@ -205,7 +205,7 @@ void result(char Noms[MAX_Length_Tab],char Adverbes[MAX_Length_Tab],char Verbes[
         }
         case 2:{
 
-                   // printf("Option 2 : le mod%cle ' nom %c qui %c verbe %c verbe %c nom %c adjectif '\n",138,45,45,45,45,45);
+            // ' nom - qui - verbe - verbe - nom - adjectif '
             char *V1_split,*N1_split,*N2_split,*A_split,*V2_split;
             V1_split = strtok(Verbes,"/");
             V2_split = strtok(Verbes,"/");
@@ -254,7 +254,7 @@ void result(char Noms[MAX_Length_Tab],char Adverbes[MAX_Length_Tab],char Verbes[
             break;
         }
         case 3:{
-            //printf("Enfin Option 3 : le mod%cle 'nom %c adjectif %c qui %c verbe %c adverbe'\n",138);
+            // 'nom - adjectif - qui - verbe - adverbe '
             char *V_split,*N1_split,*Adv_split,*A_split;
             V_split = strtok(Verbes,"/");
             N1_split = strtok(Noms,"/");
@@ -300,7 +300,7 @@ void result(char Noms[MAX_Length_Tab],char Adverbes[MAX_Length_Tab],char Verbes[
     }
 }
 
-void fill_tab(char tab[MAX_Length_Tab],char Str[MAX_LENGTH]){
+void fill_tab(char tab[MAX_Length_Tab],char Str[MAX_LENGTH]){  // permets de remplir un tableau a l'aide partir d'une chaine de caracteres.
     char c;
     size_t taille = strlen(Str);
     int i,z=0;
