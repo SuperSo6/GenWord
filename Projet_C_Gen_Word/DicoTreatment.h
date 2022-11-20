@@ -1,6 +1,6 @@
 //
 // Created by Romain on 18/10/2022.
-//
+// Romain / Rayan / Floren / Jean
 
 #ifndef PROJET_C_GEN_WORD_DICOTREATMENT_H
 #define PROJET_C_GEN_WORD_DICOTREATMENT_H

@@ -1,6 +1,6 @@
 //
 // Created by Romain on 13/11/2022.
-//
+// Romain / Rayan / Floren / Jean
 
 #ifndef PROJET_C_GEN_WORD_TREEWORDS_H
 #define PROJET_C_GEN_WORD_TREEWORDS_H

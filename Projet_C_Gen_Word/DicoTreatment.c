@@ -1,6 +1,6 @@
 //
 // Created by Romain on 18/10/2022.
-//
+// Romain / Rayan / Floren / Jean
 
 #include "DicoTreatment.h"
 #include <stdio.h>

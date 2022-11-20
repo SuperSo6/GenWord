@@ -1,6 +1,6 @@
 //
 // Created by Romain on 13/11/2022.
-//
+//  Romain / Rayan / Floren / Jean
 #include <stdio.h>
 #include <stdlib.h>
 #include "TreeWords.h"
